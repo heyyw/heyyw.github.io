@@ -96,13 +96,18 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hey~">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="最近在复习Java IO模型，其中对于同步与异步、阻塞与非阻塞概念的理解一直不够深入。在看了多篇前人总结的博客之后，对于这二者的区别终于有点领悟。 一、概念同步A调用B，B处理直到获得结果，才返回给A。需要调用者一直等待和确认调用结果是否返回，然后继续往下执行。 异步A调用B，无需等待结果，B通过状态通知A或回调函数来处理。调用结果返回时，会以消息或回调的方式通知调用者。 阻塞A调用B，A被挂起直">
+<meta name="keywords" content="Java IO">
+<meta property="og:type" content="article">
+<meta property="og:title" content="同步与异步、阻塞与非阻塞">
+<meta property="og:url" content="http://yoursite.com/2019/03/31/同步与异步、阻塞与非阻塞/index.html">
 <meta property="og:site_name" content="Hey~">
+<meta property="og:description" content="最近在复习Java IO模型，其中对于同步与异步、阻塞与非阻塞概念的理解一直不够深入。在看了多篇前人总结的博客之后，对于这二者的区别终于有点领悟。 一、概念同步A调用B，B处理直到获得结果，才返回给A。需要调用者一直等待和确认调用结果是否返回，然后继续往下执行。 异步A调用B，无需等待结果，B通过状态通知A或回调函数来处理。调用结果返回时，会以消息或回调的方式通知调用者。 阻塞A调用B，A被挂起直">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-03-31T10:07:16.246Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hey~">
+<meta name="twitter:title" content="同步与异步、阻塞与非阻塞">
+<meta name="twitter:description" content="最近在复习Java IO模型，其中对于同步与异步、阻塞与非阻塞概念的理解一直不够深入。在看了多篇前人总结的博客之后，对于这二者的区别终于有点领悟。 一、概念同步A调用B，B处理直到获得结果，才返回给A。需要调用者一直等待和确认调用结果是否返回，然后继续往下执行。 异步A调用B，无需等待结果，B通过状态通知A或回调函数来处理。调用结果返回时，会以消息或回调的方式通知调用者。 阻塞A调用B，A被挂起直">
 
 
 
@@ -110,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/31/同步与异步、阻塞与非阻塞/">
 
 
 
@@ -120,7 +125,7 @@
   };
 </script>
 
-  <title>Hey~</title>
+  <title>同步与异步、阻塞与非阻塞 | Hey~</title>
   
 
 
@@ -168,8 +173,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -207,7 +211,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -303,9 +307,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -337,10 +341,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/03/31/同步与异步、阻塞与非阻塞/" class="post-title-link" itemprop="url">同步与异步、阻塞与非阻塞</a>
+          <h1 class="post-title" itemprop="name headline">同步与异步、阻塞与非阻塞
+
               
             
           </h1>
@@ -446,24 +448,16 @@
       
 
       
-        
-          
-            <p>
-              最近在复习Java IO模型，其中对于同步与异步、阻塞与非阻塞概念的理解一直不够深入。在看了多篇前人总结的博客之后，对于这二者的区别终于有点领悟。
-一、概念同步A调用B，B处理直到获得结果，才返回给A。需要调用者一直等待和确认调用结果是否返回，然后继续往下执行。
-异步A调用B，无需等待结果，B通过状
-              ...
-            </p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/03/31/同步与异步、阻塞与非阻塞/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
+        <p>最近在复习Java IO模型，其中对于同步与异步、阻塞与非阻塞概念的理解一直不够深入。在看了多篇前人总结的博客之后，对于这二者的区别终于有点领悟。</p>
+<h3 id="一、概念"><a href="#一、概念" class="headerlink" title="一、概念"></a>一、概念</h3><h5 id="同步"><a href="#同步" class="headerlink" title="同步"></a>同步</h5><p>A调用B，B处理直到获得结果，才返回给A。需要调用者一直等待和确认调用结果是否返回，然后继续往下执行。</p>
+<h5 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h5><p>A调用B，无需等待结果，B通过状态通知A或回调函数来处理。调用结果返回时，会以消息或回调的方式通知调用者。</p>
+<h5 id="阻塞"><a href="#阻塞" class="headerlink" title="阻塞"></a>阻塞</h5><p>A调用B，A被挂起直到B返回结果给A，才能继续执行。<br>调用结果返回前，当前线程挂起不能够处理其他任务，一直等待调用结果返回。</p>
+<h5 id="非阻塞"><a href="#非阻塞" class="headerlink" title="非阻塞"></a>非阻塞</h5><p>A调用B，A不会被挂起，A可以执行其他操作。<br>调用结果返回前，当前线程不挂起，可以处理其他任务。</p>
+<h3 id="二、两者区别"><a href="#二、两者区别" class="headerlink" title="二、两者区别"></a>二、两者区别</h3><p>同步异步是个操作方式，阻塞非阻塞是线程的一种状态。</p>
+<p>同步异步指的是被调用者结果返回时通知线程的一种机制，阻塞非阻塞指的是调用结果返回进程前的状态，是挂起还是继续处理其他任务。</p>
+<p>下面是我认为两篇写得比较清晰也比较简洁的博客。<br><a href="https://www.cnblogs.com/pengsixiong/p/5556403.html" target="_blank" rel="noopener">https://www.cnblogs.com/pengsixiong/p/5556403.html</a></p>
+<p><a href="https://www.jianshu.com/p/9fa26b0b22a0" target="_blank" rel="noopener">https://www.jianshu.com/p/9fa26b0b22a0</a></p>
+
       
     </div>
 
@@ -484,14 +478,20 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Java-IO/" rel="tag"># Java IO</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -501,14 +501,19 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -528,8 +533,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -616,6 +630,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、概念"><span class="nav-number">1.</span> <span class="nav-text">一、概念</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#同步"><span class="nav-number">1.0.1.</span> <span class="nav-text">同步</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#异步"><span class="nav-number">1.0.2.</span> <span class="nav-text">异步</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#阻塞"><span class="nav-number">1.0.3.</span> <span class="nav-text">阻塞</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#非阻塞"><span class="nav-number">1.0.4.</span> <span class="nav-text">非阻塞</span></a></li></ol></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#二、两者区别"><span class="nav-number">2.</span> <span class="nav-text">二、两者区别</span></a></li></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -740,6 +771,10 @@
 
 
   
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
 
   
 
@@ -785,6 +820,8 @@
 
 
 
+
+  
 
 
   
